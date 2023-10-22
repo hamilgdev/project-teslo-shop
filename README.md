@@ -44,8 +44,18 @@ Run the containers
   make app.run_dev
 ```
 
-or you can run the containers with one command
+Or you can run the **frontend** container with one command
 
 ```bash
   make frontend.start
+```
+
+Run tests
+
+```bash
+  make frontend.test
+```
+
+```bash
+  make frontend.test.watch
 ```
