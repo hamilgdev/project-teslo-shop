@@ -1,13 +1,13 @@
 # TESLO SHOP APP
 
-A simple e-commerce app built with Nextjs, React, and Tailwindcss.
+A simple e-commerce app built with Nextjs, React, Nestjs, Mongo and Tailwindcss.
 
 ## 📜 System Requirement
 
 - Node.js `18.16.1` or later [👉 Install Node](https://nodejs.org/es/download)
 - Nextjs `13.5.6` or later [👉 Install Next](https://nextjs.org/docs/getting-started)
-- NPM. [👉 Install pnpm](https://pnpm.io/es/installation)
-- [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- NPM [👉 Install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [Nestjs](https://github.com/nestjs/nest) framework TypeScript starter repository.
 - [MongoDB](https://www.mongodb.com/) database.
 
 ### Visual Studio Code
@@ -23,7 +23,7 @@ You can use the `.env.template` file to create your `.env` file. This file is us
 ## 📚 Folder Structure
 
 - `frontend/`: Source code base. Frontend made with **NextJS**
-- 
+- `backend/`: Source code base. Backend made with **NestJS**
 - `provision/`: The files to provision the Docker containers
 
 ## 🐳 Running the app inside containers
@@ -62,4 +62,20 @@ Run tests
 
 ```bash
   make frontend.test.watch
+```
+
+Or you can run the **backend** container with one command
+
+```bash
+  make backend.start
+```
+
+Run tests
+
+```bash
+  make backend.test
+```
+
+```bash
+  make backend.test.watch
 ```
