@@ -1,1 +1,2 @@
-export { ShopLayout } from './ShopLayout'
+export * from './shop-layout'
+export * from './auth-layout'

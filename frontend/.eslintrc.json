@@ -4,18 +4,11 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["next/core-web-vitals", "standard"],
-  "plugins": ["testing-library"],
-  "overrides": [
-    // Only uses Testing Library lint rules in test files
-    {
-      "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ],
-      "extends": ["plugin:testing-library/react"]
-    }
+  "extends": [
+    "next/core-web-vitals",
+    "standard"
   ],
+  "overrides": [],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -23,12 +16,22 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react/jsx-uses-react": "off",
     "react/no-unknown-property": "off",
-    "indent": ["error", 2],
+    // @next/
+    "@next/next/no-img-element": "off",
+
+    "no-undef": "off",
+    "indent": [
+      "error",
+      2
+    ],
     "no-multiple-empty-lines": [
       "error",
       {
@@ -45,6 +48,9 @@
         "ignoreComments": true
       }
     ],
-    "quotes": ["error", "single"]
+    "quotes": [
+      "error",
+      "single"
+    ]
   }
 }

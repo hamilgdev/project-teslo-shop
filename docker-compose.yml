@@ -15,11 +15,7 @@ services:
       - main
     volumes:
       - ./frontend:/home/app
-      - nodemodules:/home/app/node_modules
-
-volumes:
-  db:
-  nodemodules:
 
 networks:
   main:
+    driver: bridge
