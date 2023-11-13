@@ -16,6 +16,40 @@ services:
     volumes:
       - ./frontend:/home/app
 
+  backend:
+    image: teslo-shop-nestjs-image
+    container_name: host-teslo-shop-backend
+    build:
+      context: ./backend
+      dockerfile: ../provision/backend/Dockerfile
+    ports:
+      - ${NEST_PORT}:${NEST_PORT}
+    stdin_open: true
+    tty: true
+    environment:
+      MONGODB_URI: ${MONGODB_URI}
+      MONGO_PORT: ${MONGO_PORT}
+    depends_on:
+      - database
+    networks:
+      - main
+    volumes:
+      - ./backend:/var/www/tesloshop
+
+  database:
+    image: mongo:6
+    container_name: database-teslo-shop
+    restart: always
+    ports:
+      - ${MONGO_PORT}:${MONGO_PORT}
+    environment:
+      MONGODB_DATABASE: ${MONGO_DATABASE}
+    volumes:
+      - ./mongo:/data/db
+    networks:
+      - main
+
+
 networks:
   main:
     driver: bridge

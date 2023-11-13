@@ -1,5 +1,7 @@
 # compiled output
 */dist
+/node_modules
+
 
 # next.js
 /.next/
@@ -75,3 +77,6 @@ logs
 *next-env.d.ts
 
 .eslintcache
+
+# database
+mongo

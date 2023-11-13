@@ -9,6 +9,9 @@ app.stop_dev:
 
 # ----------------------------------------------
 
+frontend.build:
+	docker compose build --no-cache frontend
+
 frontend.start:
 	docker compose run --rm --name host-teslo-shop-frontend \
 	--no-deps --service-ports frontend
@@ -23,3 +26,31 @@ frontend.test.watch:
 	cd frontend && npm run test:watch
 
 # ----------------------------------------------
+
+backend.build:
+	docker compose build --no-cache backend
+
+backend.start:
+	docker compose run --rm --name host-teslo-shop-backend \
+	--service-ports backend
+
+backend.stop:
+	docker compose stop backend
+
+backend.test:
+	cd backend && npm run test
+
+backend.test.watch:
+	cd backend && npm run test:watch
+
+# ----------------------------------------------
+
+database.build:
+	docker compose build --no-cache db
+
+database.start:
+	docker compose run --rm --name host-teslo-shop-db \
+	--no-deps --service-ports database
+
+database.stop:
+	docker compose stop database

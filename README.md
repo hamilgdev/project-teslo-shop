@@ -5,7 +5,10 @@ A simple e-commerce app built with Nextjs, React, and Tailwindcss.
 ## 📜 System Requirement
 
 - Node.js `18.16.1` or later [👉 Install Node](https://nodejs.org/es/download)
-- PNPM. [👉 Install pnpm](https://pnpm.io/es/installation)
+- Nextjs `13.5.6` or later [👉 Install Next](https://nextjs.org/docs/getting-started)
+- NPM. [👉 Install pnpm](https://pnpm.io/es/installation)
+- [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [MongoDB](https://www.mongodb.com/) database.
 
 ### Visual Studio Code
 
@@ -20,6 +23,7 @@ You can use the `.env.template` file to create your `.env` file. This file is us
 ## 📚 Folder Structure
 
 - `frontend/`: Source code base. Frontend made with **NextJS**
+- 
 - `provision/`: The files to provision the Docker containers
 
 ## 🐳 Running the app inside containers
